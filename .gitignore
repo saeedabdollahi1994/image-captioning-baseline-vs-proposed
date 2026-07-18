@@ -1,0 +1,107 @@
+# =========================================================
+# Python virtual environments
+# =========================================================
+.venv/
+venv/
+env/
+icenv/
+
+
+# =========================================================
+# Python cache and compiled files
+# =========================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+
+# =========================================================
+# IDE and editor files
+# =========================================================
+.vscode/
+.idea/
+*.code-workspace
+
+
+# =========================================================
+# Jupyter Notebook temporary files
+# =========================================================
+.ipynb_checkpoints/
+
+
+# =========================================================
+# Operating system files
+# =========================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# =========================================================
+# Environment variables and secrets
+# =========================================================
+.env
+.env.*
+!.env.example
+
+
+# =========================================================
+# Raw and processed datasets
+# Dataset files must not be uploaded to GitHub
+# =========================================================
+data/raw/*
+data/processed/*
+
+# Keep empty directories in Git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+
+# =========================================================
+# Model checkpoints and pretrained weights
+# =========================================================
+outputs/checkpoints/*
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+
+# =========================================================
+# Training logs and temporary experiment files
+# =========================================================
+outputs/logs/*
+runs/
+wandb/
+lightning_logs/
+
+
+# =========================================================
+# Generated candidate captions and temporary predictions
+# These files may become large
+# =========================================================
+outputs/candidates/*
+outputs/predictions/*
+
+
+# =========================================================
+# Hugging Face and PyTorch cache
+# =========================================================
+.cache/
+huggingface_cache/
+torch_cache/
+
+
+# =========================================================
+# Temporary files
+# =========================================================
+*.tmp
+*.temp
+*.log
+~$*

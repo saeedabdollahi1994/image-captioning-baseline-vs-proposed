@@ -1,0 +1,45 @@
+dataset:
+  name: flickr8k
+  images_dir: E:/Datasets/Image_Captioning/Flickr 8k Dataset/Images
+  captions_path: E:/Datasets/Image_Captioning/Flickr 8k Dataset/captions.txt
+  split_path: data/splits/shared_split.json
+
+transforms:
+  image_size: 224
+  resize_size: 256
+  image_mean:
+    - 0.5
+    - 0.5
+    - 0.5
+  image_std:
+    - 0.5
+    - 0.5
+    - 0.5
+  train_crop_scale:
+    - 0.85
+    - 1.0
+  train_crop_ratio:
+    - 0.9
+    - 1.1
+  horizontal_flip_probability: 0.5
+  brightness_jitter: 0.1
+  contrast_jitter: 0.1
+  saturation_jitter: 0.1
+  hue_jitter: 0.02
+
+dataloader:
+  train_batch_size: 16
+  evaluation_batch_size: 16
+  num_workers: 2
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  shuffle_train: true
+  drop_last_train: false
+  seed: 42
+
+tokenization:
+  max_caption_length: 40
+  padding: longest
+  truncation: true
+  label_pad_token_id: -100
